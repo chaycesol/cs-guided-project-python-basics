@@ -12,6 +12,22 @@ Examples:
 number([]) # => []
 number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 """
-def number(lines):
-    # Your code here
 
+# def number(lines):
+#     # Your code here
+#     output = []
+#     for i, v in enumerate(lines, 1):
+#         output.append(f"{i}:{v}")
+#     return output
+
+# print(number(['a', 'b','c']))
+
+def number(lines):
+    #Your code here
+    output = []
+
+    line_number = 1
+    for line in lines:
+        output.append(f"{line_number}:{line}")
+        line_number += 1
+    return output

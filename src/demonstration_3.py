@@ -18,4 +18,10 @@ return `[[1, 5, 4], ['b']]`.
 """
 def filter_homogenous(arrays):
     # Your code here
-
+    # define an empty new list
+    
+    #return a new list that only contain the lists that meet the following conditions:
+    # that is not empty
+    # have items that are all the same type
+  return [a for a in arrays if len(set(list(map(type, a)))) == 1]
+print(filter_homogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]))
